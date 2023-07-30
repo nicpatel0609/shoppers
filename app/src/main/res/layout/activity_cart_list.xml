@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.CartList">
+
+    <RelativeLayout
+        android:id="@+id/relative_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@color/purple_200">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="7dp"
+            android:src="@drawable/back_icon"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:paddingStart="13dp"
+            android:text="Cart List"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_item_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_toolbar" />
+
+
+    <TextView
+        android:id="@+id/item_alert_msg_show"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Cart is Empty"
+        android:paddingStart="20dp"
+        android:textSize="17dp"
+        android:textColor="@color/alert"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/btn_Process_to_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="26dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_start_bg"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingVertical="13dp"
+        android:text="Process to checkout"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:textSize="20dp" />
+</RelativeLayout>
